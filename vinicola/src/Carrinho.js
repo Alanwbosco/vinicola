@@ -4,10 +4,14 @@ import Header from './Header'
 const Carrinho = () => {
     const [vlrTotal, setValorTotal] = React.useState(0);
     const [input, setInput] = React.useState('');
-    const produto1 = window.localStorage.getItem('Vinho Tinto');
-    const produto2 = window.localStorage.getItem('Vinho Rose1');
-    const produtosTratados = [JSON.parse(produto1), JSON.parse(produto2)];
-    console.log(produto1);
+    
+    const produto1 = window.localStorage.getItem('Vinho TINTO') ? window.localStorage.getItem('Vinho TINTO') : null ;
+    const produto2 = window.localStorage.getItem('Vinho Rose1') ? window.localStorage.getItem('Vinho Rose1') : null;
+    const produto3 = window.localStorage.getItem('Vinho branco') ? window.localStorage.getItem('Vinho branco') : null;
+    let produtosTratados = [];
+    if(produto1 !== null) produtosTratados.push(JSON.parse(produto1)); 
+    if(produto2 !== null) produtosTratados.push(JSON.parse(produto2)); 
+    if(produto3 !== null) produtosTratados.push(JSON.parse(produto3));  
     var valorTotal = 0;
     var valorPeso = 0;
     produtosTratados.map((item) =>{
