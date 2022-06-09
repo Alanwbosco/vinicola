@@ -36,3 +36,6 @@ Para instalar as dependências
 npm install 
 npm start
 --------------------------------------------------------
+Versões:
+node v16.15.0
+npm 8.5.5
