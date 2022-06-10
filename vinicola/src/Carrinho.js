@@ -8,10 +8,23 @@ const Carrinho = () => {
     const produto1 = window.localStorage.getItem('Vinho TINTO') ? window.localStorage.getItem('Vinho TINTO') : null ;
     const produto2 = window.localStorage.getItem('Vinho Rose1') ? window.localStorage.getItem('Vinho Rose1') : null;
     const produto3 = window.localStorage.getItem('Vinho branco') ? window.localStorage.getItem('Vinho branco') : null;
+    const produto4 = window.localStorage.getItem('Vinho Branco Seco') ? window.localStorage.getItem('Vinho Branco Seco') : null;
+    const produto5 = window.localStorage.getItem('Vinho Tinto Argentino') ? window.localStorage.getItem('Vinho Tinto Argentino') : null;
+    const produto6 = window.localStorage.getItem('Vinho Branco Sec') ? window.localStorage.getItem('Vinho Branco Sec') : null;
+    const produto7 = window.localStorage.getItem('Vinho Verde Doc Branco') ? window.localStorage.getItem('Vinho Verde Doc Branco') : null;
+    const produto8 = window.localStorage.getItem('Vinho Portuges Rose Atlantico') ? window.localStorage.getItem('Vinho Portuges Rose Atlantico') : null;
+
+
     let produtosTratados = [];
     if(produto1 !== null) produtosTratados.push(JSON.parse(produto1)); 
     if(produto2 !== null) produtosTratados.push(JSON.parse(produto2)); 
-    if(produto3 !== null) produtosTratados.push(JSON.parse(produto3));  
+    if(produto3 !== null) produtosTratados.push(JSON.parse(produto3));
+    if(produto4 !== null) produtosTratados.push(JSON.parse(produto4));    
+    if(produto5 !== null) produtosTratados.push(JSON.parse(produto5));    
+    if(produto6 !== null) produtosTratados.push(JSON.parse(produto6));    
+    if(produto7 !== null) produtosTratados.push(JSON.parse(produto7));    
+    if(produto8 !== null) produtosTratados.push(JSON.parse(produto8));    
+
     var valorTotal = 0;
     var valorPeso = 0;
     produtosTratados.map((item) =>{
@@ -72,6 +85,7 @@ const Carrinho = () => {
               </div>
           </div>
       </div>
+      <label> Digite a distância em km</label>
       <input 
         type="text"
         value={input}
